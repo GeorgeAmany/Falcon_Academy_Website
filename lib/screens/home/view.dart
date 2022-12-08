@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'components/Second_column.dart';
 import 'components/first_column.dart';
 import 'components/item_text.dart';
 import 'components/login_bar.dart';
+import 'components/rest_of_the_body.dart';
 import 'components/top_blue_bar.dart';
 import 'components/top_white_bar.dart';
 
@@ -81,8 +81,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const LoginBar(),
           SizedBox(height: 30.h,),
-          SizedBox(height: 30.h,),
-
+          const RestOfTheBody(),
         ],
       ),
     );
