@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginBar extends StatefulWidget {
-  final bool isChecked ;
-  const LoginBar({Key? key, this.isChecked = true}) : super(key: key);
+  const LoginBar({Key? key, }) : super(key: key);
 
   @override
   State<LoginBar> createState() => _LoginBarState();
 }
 
 class _LoginBarState extends State<LoginBar> {
+   bool isChecked=false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -92,14 +93,14 @@ class _LoginBarState extends State<LoginBar> {
                   ),
                   SizedBox(width: 130.w,),
                   Checkbox(
-                    value: widget.isChecked,
-                    activeColor: widget.isChecked?Colors.white:Colors.red,
+                    value: isChecked,
+                    activeColor: isChecked?Colors.white:Colors.red,
                     onChanged: (value) {
                       setState(() {
-                        value = !widget.isChecked ;
+                        isChecked = value! ;
                       });
                     },
-                    fillColor:  MaterialStatePropertyAll(widget.isChecked?Colors.white:Colors.red),
+                    fillColor:  MaterialStatePropertyAll(isChecked?Colors.white:Colors.red),
                     checkColor: Colors.black,
                   ),
                   Text(
