@@ -81,6 +81,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const LoginBar(),
           SizedBox(height: 30.h,),
+          SizedBox(height: 30.h,),
 
         ],
       ),
